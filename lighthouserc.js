@@ -9,10 +9,10 @@ module.exports = {
     },
     assert: {
       assertions: {
-		      'categories.performance' : ["warn", {"minScore": 0.8, "aggregationMethod": "optimistic"}],
-        	'categories.accessibility' : ["warn", {"minScore": 0.8}],
-		      'categories.seo' : ["warn", {"minScore":  0.8}],
-        	'categories.best-practices' : ["warn", {"minScore":  0.8}],
+		'categories.performance' : ["warn", {"minScore": 1, "aggregationMethod": "pessimistic"}],
+        	'categories.accessibility' : ["warn", {"minScore": 1, "aggregationMethod": "optimistic"}],
+		'categories.seo' : ["warn", {"minScore":  1, "aggregationMethod": "median-run"}],
+        	'categories.best-practices' : ["warn", {"minScore":  1, "aggregationMethod": "median"}],
         	'categories.pwa' : "off"
       }
     },
