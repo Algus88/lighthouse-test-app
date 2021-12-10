@@ -5,15 +5,16 @@
  */
 'use strict';
 
+const constants = require('./constants.js');
 
 /** @type {LH.Config.Json} */
 const config = {
   extends: 'lighthouse:default',
   settings: {
     formFactor: 'desktop',
-    throttling: 'desktopDense4G',
-    screenEmulation: 'desktop',
-    emulatedUserAgent: 'desktop',
+    throttling: constants.throttling.desktopDense4G,
+    screenEmulation: constants.screenEmulationMetrics.desktop,
+    emulatedUserAgent: constants.userAgents.desktop,
   },
 };
 
