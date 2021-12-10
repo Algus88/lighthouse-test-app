@@ -1,3 +1,4 @@
+[  
   {
     "url": "https://algus88.github.io/lighthouse-test-app/",
     "isRepresentativeRun": true, // whether it's the median run
@@ -5,3 +6,4 @@
     "jsonPath": "home/lhci/www_example_com-_page-2020_05_22_21_15_05.report.json",
     "summary": {"performance": 0.95, "seo": 0.9, "best-practices": 1}
   }
+]
