@@ -3,8 +3,8 @@ module.exports = {
        collect: {
       url: ['https://gamesglobal.com/'],
       numberOfRuns: 3,
-	    settings: {
-        configPath: "./desktop_config.js"
+	settings: {
+       		configPath: "./desktop_config.js"
       }
     },
     assert: {
@@ -17,9 +17,9 @@ module.exports = {
       }
     },
     upload: {
-      //target: 'temporary-public-storage',
+      //target: 'temporary-public-storage'
 	target: 'filesystem',
-	outputDir:'./lhci'
+	outputDir:'.'
     },
     server: {
       // server options here
