@@ -1,7 +1,7 @@
 module.exports = {
   ci: {
     collect: {
-      staticDistDir: './',
+      url: ['https://gamesglobal.com/'],
     },
     upload: {
       target: 'temporary-public-storage',
