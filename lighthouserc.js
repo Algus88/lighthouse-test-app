@@ -17,7 +17,9 @@ module.exports = {
       }
     },
     upload: {
-      target: 'temporary-public-storage',
+      //target: 'temporary-public-storage',
+	target: 'filesystem',
+	outputDir:'./lchi'
     },
     server: {
       // server options here
