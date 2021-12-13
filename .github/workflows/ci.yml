@@ -10,7 +10,4 @@ jobs:
           node-version: 14
       - run: npm install && npm install -g @lhci/cli@0.8.x
       - run: npm run build
-      - run: lhci autorun
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-      - run: lhci autorun collect.settings.config-path=./mobile_config.js
+      - run: lhci --collect.numberOfRuns 5
