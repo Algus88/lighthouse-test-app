@@ -2,7 +2,7 @@ module.exports = {
   ci: {
        collect: {
       url: ['https://gamesglobal.com/'],
-      numberOfRuns: 3,
+      numberOfRuns: 2,
 	settings: {
        		configPath: "./desktop_config.js"
       }
