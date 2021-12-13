@@ -13,4 +13,4 @@ jobs:
       - run: lhci autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-      - run: lhci autorun --preset
+      - run: lhci autorun collect.settings.config-path=./mobile_config.js
