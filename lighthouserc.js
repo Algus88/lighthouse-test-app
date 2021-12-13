@@ -17,9 +17,7 @@ module.exports = {
       }
     },
     upload: {
-      //target: 'temporary-public-storage'
-	target: 'filesystem',
-	outputDir: './'
+      target: 'temporary-public-storage'
     },
     server: {
       // server options here
