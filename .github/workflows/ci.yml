@@ -13,4 +13,4 @@ jobs:
       - run: lhci autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-      - run: lhci --config-path= ./lighthouse-test-app/mobile_config.js 
+      - run: lhci --config-path=./lighthouse-test-app/mobile_config.js 
