@@ -2,17 +2,14 @@ module.exports = {
   ci: {
        collect: {
       url: ['https://gamesglobal.com/'],
-      numberOfRuns: 1,
-	settings: {
-       		configPath: "./desktop_config.js"
-      }
+      numberOfRuns: 3
     },
     assert: {
       assertions: {
-		'categories.performance' : ["warn", {"minScore": 1, "aggregationMethod": "pessimistic"}],
-        	'categories.accessibility' : ["warn", {"minScore": 1, "aggregationMethod": "optimistic"}],
-		'categories.seo' : ["warn", {"minScore":  1, "aggregationMethod": "median-run"}],
-        	'categories.best-practices' : ["warn", {"minScore":  1, "aggregationMethod": "median"}],
+		'categories.performance' : ["error", {"minScore": 0.8, "aggregationMethod": "pessimistic"}],
+        	'categories.accessibility' : ["error", {"minScore": 0.7, "aggregationMethod": "optimistic"}],
+		'categories.seo' : ["error", {"minScore":  0.6, "aggregationMethod": "median-run"}],
+        	'categories.best-practices' : ["error", {"minScore":  0.7, "aggregationMethod": "median"}],
         	'categories.pwa' : "off"
       }
     },
