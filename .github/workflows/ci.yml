@@ -10,4 +10,4 @@ jobs:
           node-version: 14
       - run: npm install && npm install -g @lhci/cli@0.8.x
       - run: npm run build
-      - run: lhci autorun --collect.settings.configPath=/.mobile_config.js
+      - run: lhci autorun --collect.settings.configPath=./mobile_config.js
