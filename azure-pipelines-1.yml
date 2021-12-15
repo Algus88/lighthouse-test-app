@@ -20,6 +20,6 @@ steps:
     npm run build
   displayName: 'npm install and build' 
 - script: | 
-    npm run lhci autorun 
+     lhci autorun 
   displayName: 'run lhci' 
 
