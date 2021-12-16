@@ -13,13 +13,13 @@ variables:
   npm_config_cache: $(Pipeline.Workspace)/.npm
   
 steps:
-- task: Cache@2
-  inputs:
-    key: 'npm | "$(Agent.OS)" | package-lock.json'
-    restoreKeys: |
-       npm | "$(Agent.OS)"
-    path: $(npm_config_cache)
-  displayName: Cache 1 npm $(npm_config_cache)
+#- task: Cache@2
+#  inputs:
+#    key: 'npm | "$(Agent.OS)" | package-lock.json'
+#    restoreKeys: |
+#       npm | "$(Agent.OS)"
+#    path: $(npm_config_cache)
+#  displayName: Cache 1 npm $(npm_config_cache)
 
 # - script: npm ci
 - task: NodeTool@0
@@ -27,9 +27,9 @@ steps:
     versionSpec: '14.x'
   displayName: 'Install Node.js'
 
-- script: npm install && npm run build
-  condition: ne(variables.CACHE_RESTORED, 'true')
-  displayName: 'check npm install variables.CACHE_RESTORED'
+#- script: npm install && npm run build
+#  condition: ne(variables.CACHE_RESTORED, 'true')
+#  displayName: 'check npm install variables.CACHE_RESTORED'
 
 - script: 
     npm install -g @lhci/cli@0.8.x
@@ -37,12 +37,4 @@ steps:
 - script: | 
      lhci autorun 
   displayName: 'run lhci' 
-
-- task: Cache@2
-  inputs:
-    key: 'npm | "$(Agent.OS)" | package-lock.json'
-    restoreKeys: |
-       npm | "$(Agent.OS)"
-    path: $(npm_config_cache)
-  displayName: Cache npm $(npm_config_cache)
 
