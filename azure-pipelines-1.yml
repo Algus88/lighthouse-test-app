@@ -28,8 +28,8 @@ steps:
   displayName: 'Install Node.js'
 
 - script: npm install && npm run build
-  condition: ne(variables.CACHE_RESTORED, 'true')
-  displayName: 'check npm install $(variables.CACHE_RESTORED)'
+  condition: eq(variables.CACHE_RESTORED, 'true')
+  displayName: 'check npm install'
 
 - script: 
     npm install -g @lhci/cli@0.8.x
