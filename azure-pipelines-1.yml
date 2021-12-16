@@ -20,6 +20,9 @@ steps:
        npm | "$(Agent.OS)"
     path: $(npm_config_cache)
   displayName: Cache 1 npm $(npm_config_cache)
+ 
+- script: npm cache verify
+  displayName: npm cache verify
 
 # - script: npm ci
 - task: NodeTool@0
