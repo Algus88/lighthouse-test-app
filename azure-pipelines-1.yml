@@ -19,7 +19,7 @@ steps:
     restoreKeys: |
        npm | "$(Agent.OS)"
     path: $(npm_config_cache)
-  displayName: Cache npm
+  displayName: Cache npm $(npm_config_cache)
 
 - script: npm ci
 - task: NodeTool@0
