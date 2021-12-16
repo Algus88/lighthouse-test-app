@@ -27,14 +27,13 @@ steps:
     versionSpec: '14.x'
   displayName: 'Install Node.js'
 
-- script: npm install 
+- script: npm install && npm run build
   condition: ne(variables.CACHE_RESTORED, 'true')
   displayName: 'check npm install'
-  
+
 - script: 
     npm install -g @lhci/cli@0.8.x
-    npm run build
-  displayName: 'npm install && npm install -g @lhci/cli@0.8.x'
+  displayName: 'npm install -g @lhci/cli@0.8.x'
 - script: | 
      lhci autorun 
   displayName: 'run lhci' 
