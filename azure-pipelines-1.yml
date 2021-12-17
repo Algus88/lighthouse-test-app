@@ -21,7 +21,9 @@ steps:
     path: $(npm_config_cache)
   displayName: Cache 1 npm $(npm_config_cache)
 
-#- script: npm ci
+- script: npm ci
+  condition: ne(variables.CACHE_RESTORED, 'true')
+  displayName: 'check npm ci  variables.CACHE_RESTORED'
 #- task: NodeTool@0
 #  inputs:
 #    versionSpec: '14.x'
