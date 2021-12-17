@@ -21,12 +21,7 @@ steps:
     path: $(npm_config_cache)
   displayName: Cache 1 npm $(npm_config_cache)
 
-- script: 
-    npm install -g @lhci/cli@0.8.x
-#- script: npm cache verify
-#  displayName: npm cache verify
-
-# - script: npm ci
+- script: npm ci
 - task: NodeTool@0
   inputs:
     versionSpec: '14.x'
