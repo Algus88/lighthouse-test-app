@@ -11,4 +11,6 @@ jobs:
       - run: npm install && npm install -g @lhci/cli@0.8.x
       - run: npm run build
       - run: lhci autorun --collect.settings.configPath=./desktop_config.js
+        env: 
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
       - run: lhci autorun --collect.settings.configPath=./mobile_config.js

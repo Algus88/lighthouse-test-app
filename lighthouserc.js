@@ -2,11 +2,11 @@ module.exports = {
   ci: {
        collect: {
       url: ['https://gamesglobal.com/',
-	    'https://gamesglobal.com/OurBusiness',
-	    'https://gamesglobal.com/Media',
-	    'https://gamesglobal.com/ContactUs'
+	    //'https://gamesglobal.com/OurBusiness',
+	    //'https://gamesglobal.com/Media',
+	    //'https://gamesglobal.com/ContactUs'
 	   ],
-      numberOfRuns: 3
+      numberOfRuns: 1
     },
     assert: {
       assertions: {
