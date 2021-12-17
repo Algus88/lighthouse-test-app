@@ -23,7 +23,7 @@ steps:
 
 - script: npm ci
   displayName: 'check npm ci  variables.CACHE_RESTORED'
-  condition: ne(variables.CACHE_RESTORED, 'false')
+  condition: eq(variables.CACHE_RESTORED, 'false')
 #- task: NodeTool@0
 #  inputs:
 #    versionSpec: '14.x'
