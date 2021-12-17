@@ -19,9 +19,9 @@ steps:
     restoreKeys: |
        npm | "$(Agent.OS)"
     path: $(npm_config_cache)
+- script: npm ci
   displayName: Cache 1 npm $(npm_config_cache)
 
-- script: npm ci
 - task: NodeTool@0
   inputs:
     versionSpec: '14.x'
