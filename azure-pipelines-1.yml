@@ -22,7 +22,7 @@ steps:
   displayName: Cache 1 npm $(npm_config_cache)
 
 - script: npm ci
-  condition: ne(variables.CACHE_RESTORED, 'false')
+#  condition: ne(variables.CACHE_RESTORED, 'false')
   displayName: 'check npm ci  variables.CACHE_RESTORED'
 #- task: NodeTool@0
 #  inputs:
