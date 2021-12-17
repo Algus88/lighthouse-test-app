@@ -20,9 +20,11 @@ steps:
        npm | "$(Agent.OS)"
     path: $(npm_config_cache)
   displayName: Cache 1 npm $(npm_config_cache)
- 
-- script: npm cache verify
-  displayName: npm cache verify
+
+- script: 
+    npm install -g @lhci/cli@0.8.x
+#- script: npm cache verify
+#  displayName: npm cache verify
 
 # - script: npm ci
 - task: NodeTool@0
@@ -34,10 +36,10 @@ steps:
 #  condition: ne(variables.CACHE_RESTORED, 'true')
 #  displayName: 'check npm install variables.CACHE_RESTORED'
 
-- script: 
-    npm install -g @lhci/cli@0.8.x
-  displayName: 'npm install -g @lhci/cli@0.8.x'
+#- script: 
+#    npm install -g @lhci/cli@0.8.x
+#  displayName: 'npm install -g @lhci/cli@0.8.x'
 - script: | 
      lhci autorun 
-  displayName: 'run lhci' 
+  displayName: 'run lhci'
 
